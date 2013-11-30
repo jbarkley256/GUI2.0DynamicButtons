@@ -82,6 +82,20 @@ public class ForestPanel extends Scene {
        cityButton.setBorderPainted(false);
        cityButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
        this.add(cityButton);
+       
+         keyButton = new JButton("");
+       keyButton.setBounds(100, 210, 80, 50);
+       keyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/key.png")));
+       keyButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                keyButtonActionPerformed(evt);
+            }
+        });
+       keyButton.setOpaque(true);
+       keyButton.setContentAreaFilled(false);
+       keyButton.setBorderPainted(false);
+       keyButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+       this.add(keyButton);
     }
     
     
@@ -93,7 +107,12 @@ public class ForestPanel extends Scene {
     private void cityButtonActionPerformed(java.awt.event.ActionEvent evt) {                                        
               System.out.println("Travelling to the ominous Door");
               sceneframe.displayScene(1);
-    } 
+    }
+    
+    private void keyButtonActionPerformed(java.awt.event.ActionEvent evt) {                                        
+              System.out.println("Pick up key");
+              keyButton.setVisible(false);
+    }
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -144,5 +163,6 @@ public class ForestPanel extends Scene {
    private static final int ICON_WIDTH = 400;
    private static final int ICON_HEIGHT = 100;
    private static final int CAR_WIDTH = 100;
+  private javax.swing.JButton keyButton;
         
 }
