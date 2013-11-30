@@ -94,6 +94,8 @@ public class SceneFrame extends javax.swing.JFrame {
         jButton3.setForeground(new java.awt.Color(102, 102, 102));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/key.png"))); // NOI18N
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton3.setDisabledIcon(null);
+        jButton3.setEnabled(false);
         jButton3.setFocusable(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,7 +159,7 @@ public class SceneFrame extends javax.swing.JFrame {
     private javax.swing.JPanel SceneManager;
     private javax.swing.JPanel SceneManager1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    public javax.swing.JButton jButton3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables

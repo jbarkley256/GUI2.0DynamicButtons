@@ -21,6 +21,7 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
+import java.util.Observable;
 
 /**
  *
@@ -109,9 +110,11 @@ public class ForestPanel extends Scene {
               sceneframe.displayScene(1);
     }
     
-    private void keyButtonActionPerformed(java.awt.event.ActionEvent evt) {                                        
+    private void keyButtonActionPerformed (java.awt.event.ActionEvent evt) {                                        
               System.out.println("Pick up key");
               keyButton.setVisible(false);
+              sceneframe.jButton3.setEnabled(true);
+              
     }
 
     public void paintComponent(Graphics g) {
