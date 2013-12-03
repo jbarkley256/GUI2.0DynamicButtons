@@ -1,8 +1,5 @@
 package scene;
 
-import Animations.BoxShape;
-import Animations.MoveableShape;
-import Animations.ShapeIcon;
 import java.awt.Graphics;
 //import java.awt.Graphics2D;
 //import java.awt.Image;
@@ -11,14 +8,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import main.SceneFrame;
 import java.awt.Cursor;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import javax.imageio.ImageIO;
-import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JLabel;
-import javax.swing.Timer;
 
 /**
  *
@@ -29,12 +18,13 @@ public class DarkRoom_Pic extends Scene {
 /**
  * Creates a DarkRoom_Pic Object
  */
-    public DarkRoom_Pic(SceneFrame frame) {
-        
+    public DarkRoom_Pic(SceneFrame frame) {   
         super("DarkRoom", frame);
-        isDark=true;
-        sceneframe.setTextArea("First Time Viewing This\n Scene");
         
+        //Room is "dark" when first entered
+        isDark=true;
+        
+        //Load background images for this scene
         try {
 
             image = (new ImageIcon(getClass().getResource("/resources/DarkRoom.JPG"))).getImage();
@@ -47,33 +37,35 @@ public class DarkRoom_Pic extends Scene {
 
     }
     
+    //Override to update inventory buttons
     @Override
     public void initControlButtons(){
-                       this.setLayout(null);
+       
+        this.setLayout(null);
 
-
-       SwordButton = new JButton("");
-       SwordButton.setVisible(false);
-       SwordButton.setBounds(150, 100, 100, 150);
-       SwordButton.setContentAreaFilled(false);
-       SwordButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Steel_sword_icon.png")));
-       SwordButton.addActionListener(new java.awt.event.ActionListener() {
+        SwordButton = new JButton("");
+        SwordButton.setVisible(false);
+        SwordButton.setBounds(150, 100, 100, 150);
+        SwordButton.setContentAreaFilled(false);
+        SwordButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Steel_sword_detail.png")));
+        SwordButton.addActionListener(new java.awt.event.ActionListener() {
+    
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SwordButtonActionPerformed(evt);
             }
         });
-       SwordButton.setOpaque(false);
-       SwordButton.setContentAreaFilled(false);
-       SwordButton.setBorderPainted(false);
-       SwordButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-       this.add(SwordButton);
+        SwordButton.setOpaque(false);
+        SwordButton.setContentAreaFilled(false);
+        SwordButton.setBorderPainted(false);
+        SwordButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        this.add(SwordButton);
   
     }
     
     private void SwordButtonActionPerformed (java.awt.event.ActionEvent evt) {                                        
               System.out.println("Pick up sword.");
               SwordButton.setVisible(false);
-              sceneframe.jButton1.setEnabled(true);
+              sceneframe.swordButton.setEnabled(true);
               
         }
     

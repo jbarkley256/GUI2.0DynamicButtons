@@ -67,7 +67,7 @@ public class KeyAlcove22 extends Scene {
     private void keyButtonActionPerformed (java.awt.event.ActionEvent evt) {                                        
               System.out.println("Pick up key");
               keyButton.setVisible(false);
-              sceneframe.jButton3.setEnabled(true);
+              sceneframe.keyButton.setEnabled(true);
               
     }
         

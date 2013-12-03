@@ -31,7 +31,6 @@ public class StartingCell_Pic extends Scene {
  */
     public StartingCell_Pic(SceneFrame frame) {
         super("FirstPanel", frame);
-        sceneframe.setTextArea("First Time Viewing This\n Scene");
         
         try {            
             image = (new ImageIcon(getClass().getResource("/resources/JailCell.JPG"))).getImage();

@@ -77,15 +77,15 @@ public class SceneFrame extends javax.swing.JFrame {
 
         SceneManager1 = new scene.ScenePanel();
         SceneManager = new scene.ScenePanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        torchButton = new javax.swing.JButton();
+        keyButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        storyText = new javax.swing.JTextArea();
         ForwardButton = new javax.swing.JButton();
         LeftButton = new javax.swing.JButton();
         RightButton = new javax.swing.JButton();
         BackButton = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        swordButton = new javax.swing.JButton();
 
         javax.swing.GroupLayout SceneManager1Layout = new javax.swing.GroupLayout(SceneManager1);
         SceneManager1.setLayout(SceneManager1Layout);
@@ -117,35 +117,35 @@ public class SceneFrame extends javax.swing.JFrame {
             .addGap(0, 298, Short.MAX_VALUE)
         );
 
-        jButton2.setBackground(new java.awt.Color(51, 51, 51));
-        jButton2.setForeground(new java.awt.Color(102, 102, 102));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/torch2.png"))); // NOI18N
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton2.setEnabled(false);
-        jButton2.setFocusable(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        torchButton.setBackground(new java.awt.Color(51, 51, 51));
+        torchButton.setForeground(new java.awt.Color(102, 102, 102));
+        torchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/torch2.png"))); // NOI18N
+        torchButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        torchButton.setEnabled(false);
+        torchButton.setFocusable(false);
+        torchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                torchButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(51, 51, 51));
-        jButton3.setForeground(new java.awt.Color(102, 102, 102));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/key.png"))); // NOI18N
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton3.setEnabled(false);
-        jButton3.setFocusable(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        keyButton.setBackground(new java.awt.Color(51, 51, 51));
+        keyButton.setForeground(new java.awt.Color(102, 102, 102));
+        keyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/key.png"))); // NOI18N
+        keyButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        keyButton.setEnabled(false);
+        keyButton.setFocusable(false);
+        keyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                keyButtonActionPerformed(evt);
             }
         });
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jScrollPane1.setViewportView(jTextArea1);
+        storyText.setColumns(20);
+        storyText.setEditable(false);
+        storyText.setRows(5);
+        storyText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jScrollPane1.setViewportView(storyText);
 
         ForwardButton.setText("Forward");
         ForwardButton.addActionListener(new java.awt.event.ActionListener() {
@@ -175,11 +175,11 @@ public class SceneFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Steel_sword_icon.png"))); // NOI18N
-        jButton1.setEnabled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        swordButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Steel_sword_icon.png"))); // NOI18N
+        swordButton.setEnabled(false);
+        swordButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                swordButtonActionPerformed(evt);
             }
         });
 
@@ -193,12 +193,12 @@ public class SceneFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(torchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(keyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(2, 2, 2))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(swordButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(18, 18, 18)
                             .addComponent(BackButton)
@@ -212,7 +212,7 @@ public class SceneFrame extends javax.swing.JFrame {
                         .addComponent(LeftButton)
                         .addGap(39, 39, 39)
                         .addComponent(RightButton)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGap(68, 68, 68)
                         .addComponent(ForwardButton)
@@ -227,10 +227,10 @@ public class SceneFrame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(torchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(keyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(swordButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -250,21 +250,21 @@ public class SceneFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void torchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_torchButtonActionPerformed
    currentScene=sceneList.get(currentIdx);
    currentScene.isDark=false;
    currentScene.updateButtons();
    this.displayScene(currentIdx);
    currentScene.updateDirectionButtons();
    
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_torchButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void keyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keyButtonActionPerformed
    currentScene=sceneList.get(currentIdx);
    currentScene.isClosed=false;
    this.displayScene(currentIdx);
    currentScene.updateDirectionButtons();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_keyButtonActionPerformed
 
     private void ForwardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ForwardButtonActionPerformed
         nextIdx = scenetable.changeScene(currentIdx, 0);
@@ -291,15 +291,15 @@ public class SceneFrame extends javax.swing.JFrame {
         currentScene.updateDirectionButtons();
     }//GEN-LAST:event_BackButtonActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void swordButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_swordButtonActionPerformed
    currentScene=sceneList.get(currentIdx);
    currentScene.isAlive=false;
    this.displayScene(currentIdx);
    currentScene.updateDirectionButtons();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_swordButtonActionPerformed
 
     public void setTextArea(String TA){
-        jTextArea1.setText(TA);
+        storyText.setText(TA);
     }
     
     public void repaintScene(){
@@ -324,10 +324,10 @@ public class SceneFrame extends javax.swing.JFrame {
     private javax.swing.JButton RightButton;
     private javax.swing.JPanel SceneManager;
     private javax.swing.JPanel SceneManager1;
-    public javax.swing.JButton jButton1;
-    public javax.swing.JButton jButton2;
-    public javax.swing.JButton jButton3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    public javax.swing.JButton keyButton;
+    private javax.swing.JTextArea storyText;
+    public javax.swing.JButton swordButton;
+    public javax.swing.JButton torchButton;
     // End of variables declaration//GEN-END:variables
 }

@@ -69,8 +69,8 @@ public class Torch_Pic extends Scene {
     private void TorchButtonActionPerformed (java.awt.event.ActionEvent evt) {                                        
               System.out.println("Pick up key");
               TorchButton.setVisible(false);
-              sceneframe.jButton2.setEnabled(true);
-              sceneframe.jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/torch.gif")));
+              sceneframe.torchButton.setEnabled(true);
+              sceneframe.torchButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/torch.gif")));
               
     }
     
